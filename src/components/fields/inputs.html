@@ -1,0 +1,45 @@
+<div>
+        <h4>Title</h4>
+        <div className="input-container">
+          <input type="text" placeholder="Placeholder" />
+        </div>
+      </div>
+      <h4>Title</h4>
+      {/* <div class="input-container">
+              </div>
+      <ul>
+        <option value=""></option>
+        <option value="a">Area A</option>
+        <option value="b">Area B</option>
+      </ul> */}
+
+      <form action="">
+        <h4>Title</h4>
+        <div className="input-container">
+          <label className="radio-label" htmlFor="selection">
+            Selection
+          </label>
+          <input id="selection" type="radio" name="selection"  />
+        </div>
+        <div className="input-container">
+          <label className="radio-label" htmlFor="selection2">
+            Selection
+          </label>
+          <input id="selection2" type="radio" name="selection"  />
+        </div>
+      </form>
+
+      <div>
+        <h4>Photo</h4>
+        <div className="input-container input-container-photo">
+          <img src="/assets/icons/inactive/Camera.svg" alt="pic" />
+          <input type="file" accept="image/*" className="hidden-file-input"/>
+        </div>
+      </div>
+      <div>
+        <h4>Photo</h4>
+        <div className="input-container input-container-photo input-container-photo-preview">
+          <img src="/assets/icons/active/Camera.svg" alt="pic" />
+          <input type="file" accept="image/*" className="hidden-file-input"/>
+        </div>
+      </div>

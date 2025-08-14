@@ -1,0 +1,236 @@
+/*
+=============== 
+Fonts
+===============
+*/
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+
+  /* primary/main color */
+  --clr-primary-1: #FFBB54;
+  
+
+  /* secondary/main color */
+  --clr-secondary-1: #25C78B;
+  --clr-secondary-2: #04A4F4;
+  --clr-secondary-3: #DB5962;
+
+
+  /* neutral/main color */
+  --clr-neutral-1: #141522;
+  --clr-neutral-2: #9C9CA4;
+  --clr-neutral-3: #DFDFDF;
+  --clr-neutral-4: #F5F5F7;
+  --clr-neutral-5: #FCFCFC;
+  --clr-neutral-6: #FFFFFF;
+
+
+  /* label/main color */
+  --clr-label-1: #EAF8FF;
+  --clr-label-2: #EFF6E9;
+  --clr-label-3: #FFF3E0;
+  --clr-label-4: #FFF4F3;
+  --clr-label-5: linear-gradient(to right,
+  #547AFF 0%,
+  #1337F2 92%,s
+  #2400FF 100%);
+
+  
+  --ff-primary: "Plus Jakarta Sans", sans-serif;
+  --ff-secondary: 
+
+  --transition: all 0.3s linear;
+  --spacing: ;
+  --radius: 1rem;
+  --light-shadow: 
+  --dark-shadow:  
+  --max-width: 
+  --fixed-width: 
+}
+
+/*
+=============== 
+Global Styles
+===============
+*/
+html {
+  font-size: 62.5%;
+}
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;;
+  background: var(--clr-neutral-6);
+  color: var(--clr-neutral-1);
+  line-height: 200%;
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+/* .plus-jakarta-sans-<uniquifier> {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+/* ul {
+  list-style-type: ;
+} */
+/* a {
+  text-decoration: ;
+} */
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  line-height: 150%;
+  margin-bottom: 0.75rem;
+  font-family: var(--ff-primary);
+}
+h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  
+}
+h2 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+h4 {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+p {
+  margin-bottom: 1.4rem;
+  color: var(--clr-grey-5);
+  margin: 0;
+}
+
+@media screen and (min-width: 800px) {
+
+
+}
+
+/* me-made classes */
+.border-radius{
+  border-radius: var(--radius);
+}
+.flex{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+button{
+  cursor: pointer;
+}
+.space-between{
+  justify-content: space-between;
+}
+.gap{gap: 1.5rem;}
+/*  global classes */
+
+/* input//////////// */
+.input-container{
+  border-radius: var(--radius);
+  padding: 2rem 1.6rem;
+  margin: 1rem;
+  border: 1px  solid var(--clr-neutral-4);
+  display: flex;
+  flex-direction: row;
+}
+
+.input-container:focus-within, .input-container:active{
+  border: 1px  solid var(--clr-primary-1);
+}
+
+  select ,input{
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 150%;
+  color: var(--clr-neutral-1);
+  outline: none;
+  flex-grow: 1;
+ }
+ select{
+  display: flex;
+  justify-content: space-between;
+  outline: none;
+ }
+ .option{
+    border: 1px  solid var(--clr-primary-1);
+ }
+.radio-label{
+  flex-grow: 1;
+  border-color:#ccc;
+}
+
+.input-container input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 25px;
+  height: 25px;
+  border: 1px solid var(--clr-neutral-4);
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 0; 
+  flex-grow: 0
+
+}
+
+.input-container input[type="radio"]:checked{
+  border: 7px solid var(--clr-primary-1);
+}
+
+.photo-upload{
+  cursor: pointer;
+  /* display:none; */
+
+}
+.input-container-photo{
+  border-radius: 10px;
+  padding: 4rem;
+  justify-content: center;
+  position: relative;
+}
+.hidden-file-input {
+  opacity: 0; 
+  width: 0.1px;
+  height: 0.1px;
+  position: absolute; 
+  z-index: 2;
+}
+
+/* menu */
+.menu-option{
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+.menu-active{
+  background-color: var(--clr-neutral-4);
+}
+.menu-inactive{
+  color: var(--clr-neutral-2);
+
+}
+/* section */
