@@ -1,25 +1,19 @@
 import { useTranslation } from "react-i18next";
+import Dashboard from "./pages/Dashboard.js";
+import RootLayout from "./layouts/RootLayout.js";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const App = () => {
+
+
   const { t } = useTranslation();
+
+  const router= createBrowserRouter([
+    {path:'/',element: <RootLayout/>}
+  ])
+
   return (
-    <>
-      <div className="menu-option border-radius flex menu-active">
-        <img src="/assets/icons/active/Overview.svg" alt="" />
-        <p>Overview</p>
-      </div>
-      <div className="menu-option border-radius flex menu-inactive">
-        <img src="/assets/icons/inactive/menu-board.svg" alt="" />
-        <p>Overview</p>
-      </div>
-      <div className="menu-option border-radius flex menu-active space-between">
-        <div className="flex gap">
-          <img src="/assets/icons/active/Overview.svg" alt="" />
-          <p>Overview</p>
-        </div>
-        <img src="/assets/icons/arrow-up.svg" alt="" />
-      </div>
-    </>
+    <RouterProvider router={router}></RouterProvider>
   );
 };
 
