@@ -1,9 +1,20 @@
-import React from 'react'
+import { Outlet } from "react-router-dom";
+import NavContainer from "./NavContainer.js";
+import SideBar from "./SideBar.js";
+import LangSwitcher from "../pages/LangSwitcher.js";
 
 const RootLayout = () => {
+  
   return (
-    <div>RootLayout</div>
-  )
-}
+    <main className="display-flex">
+      <SideBar/>
+      <div>
+        <NavContainer />
+        <LangSwitcher/>
+        <Outlet />
+      </div>
+    </main>
+  );
+};
 
-export default RootLayout
+export default RootLayout;

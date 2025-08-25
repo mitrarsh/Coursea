@@ -72,7 +72,7 @@ html {
 }
 body {
   font-family: "Plus Jakarta Sans", sans-serif;;
-  background: var(--clr-neutral-6);
+  background: #F5F5F7;
   color: var(--clr-neutral-1);
   line-height: 200%;
   font-weight: 400;
@@ -235,14 +235,9 @@ button{
 /* menu */
 .menu-option{
   gap: 1.5rem;
-  padding: 1.5rem;
+  padding: 1rem;
 }
-.menu-active{
-  background-color: var(--clr-neutral-4);
-}
-.menu-inactive{
-  color: var(--clr-neutral-2);
-}
+
 
 /* ////////////////////button */
 

@@ -9,6 +9,7 @@ i18n
   .use(Backend)
   .init({
     debug: true,
+    lng: "en",
     fallbackLng: "en",
     returnObjects: true,
   });
