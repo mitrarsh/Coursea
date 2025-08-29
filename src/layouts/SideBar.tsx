@@ -46,7 +46,7 @@ const SideBar = () => {
   ];
 
   return (
-    <div className="w-[256px] display-flex flex-col align-middle bg-white p-8 h-screen gap-20 fixed z-10 top-0 left-0 md:relative ">
+    <div className="w-[256px] flex-col align-middle bg-white p-8 h-screen gap-20 fixed z-10 top-0 left-0 hidden md:relative md:flex">
       <div className="flex gap justify-center">
         <img src="/assets/images/Union.svg" alt="" />
         <img src="/assets/images/Coursea.svg" alt="" />

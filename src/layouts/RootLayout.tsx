@@ -8,7 +8,7 @@ const RootLayout = () => {
   return (
     <main className="display-flex">
       <SideBar/>
-      <div>
+      <div className="flex-1">
         <NavContainer />
         <LangSwitcher/>
         <Outlet />
