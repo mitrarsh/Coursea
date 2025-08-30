@@ -7,5 +7,10 @@
   "message": "پیام",
   "setting": "تنظیمات",
   "upgrade": "ارتقا به حرفه‌ای",
-  "freeMonth": "یک ماه رایگان بگیر"
+  "freeMonth": "یک ماه رایگان بگیر",
+  "greeting": "خوش‌آمدی، میترا",
+  "runningCourse": "دوره فعلی",
+  "course": "دوره",
+  "letslearnsomethingnewtoday": "!امروز چیز جدیدی یاد بگیر",
+  "activity": "فعالیت"
 }

@@ -7,5 +7,10 @@
   "message": "Message",
   "setting": "Setting",
   "upgrade": "Upgrade to Pro",
-  "freeMonth": "Get 1 Month Free"
+  "freeMonth": "Get 1 Month Free",
+  "greeting": "Welcome, Mitra",
+  "runningCourse": "Running Course",
+  "course": "course",
+  "letslearnsomethingnewtoday": "Let's learn something new today!",
+  "activity": "Activity"
 }

@@ -10,7 +10,7 @@ const RootLayout = () => {
       <SideBar/>
       <div className="flex-1">
         <NavContainer />
-        <LangSwitcher/>
+        
         <Outlet />
       </div>
     </main>
