@@ -7,6 +7,11 @@ export const fetchTodayCourses = async () =>{
     return res.data;
 }
 
+export const fetchMentors= async()=>{
+    const res= await axios.get(`${API_URL}/mentors`);
+    return res.data
+} 
+
 // export const createPost = async (newPost: { title: string; body: string }) => {
 //   const res = await axios.post(`${API_URL}/posts`, newPost);
 //   return res.data;

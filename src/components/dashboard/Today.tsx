@@ -22,7 +22,7 @@ const Today = () => {
   }
 
   return (
-    <div className="bg-white p-8 rounded-2xl  display-flex flex-col gap-4 max-w-2xl mx-auto">
+    <div className="bg-white p-8 rounded-2xl  display-flex flex-col gap-4 max-w-2xl mx-auto ">
       <SliderWrapper
         settings={sliderSettings}
         classname=""
