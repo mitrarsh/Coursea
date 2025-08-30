@@ -10,20 +10,24 @@ type sliderProps = {
   classname: string;
   children?: React.ReactNode;
   disabledIdx: boolean;
-  title:string
+  title:string;
+  arrowSize: "sm" | "lg";
+  sliderTitleClassname?: string;
 };
 type refType = Slider | null;
 
-const SliderWrapper = ({ settings, classname, disabledIdx, title, children }: sliderProps) => {
+const SliderWrapper = ({ settings, classname, disabledIdx, title, children, arrowSize,sliderTitleClassname }: sliderProps) => {
   const sliderRef = useRef<refType>(null);
+
+  const arrowClasses= arrowSize==="lg"?"w-8 h-8":""
 
   return (
     <>
       <header className="flex justify-between">
-        <h4>{title}</h4>
+        <h4 className={sliderTitleClassname}>{title}</h4>
         <div className="flex">
           <img
-            className="-rotate-90"
+            className={`-rotate-90 ${arrowClasses}`}
             src={`/assets/icons/${
               disabledIdx ? "inactive" : "active"
             }/arrow-up.svg`}
@@ -31,7 +35,7 @@ const SliderWrapper = ({ settings, classname, disabledIdx, title, children }: sl
             onClick={() => sliderRef.current?.slickPrev()}
           />
           <img
-            className="rotate-90"
+            className={`rotate-90 ${arrowClasses}`}
             src={`/assets/icons/${
               disabledIdx ? "inactive" : "active"
             }/arrow-up.svg`}

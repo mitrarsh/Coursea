@@ -1,5 +1,6 @@
 import { useState } from "react";
 import SliderWrapper from "../../utils/components/slider.js";
+import { useTodayCourses } from "../../utils/hooks/useTodayCourses.js";
 
 const Today = () => {
   const [disabledIdx, setDisabledIdx] = useState(false);
@@ -10,6 +11,12 @@ const Today = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
+
+  const{data:todayCourses, isLoading, error}= useTodayCourses();
+
+    if (isLoading) {return <p>Loading...</p>};
+    if (error) {return <p>Error loading posts</p>;}
+
   return (
     <div className="bg-white p-8 rounded-2xl  display-flex flex-col gap-4">
       <SliderWrapper
@@ -17,8 +24,10 @@ const Today = () => {
         classname=""
         disabledIdx={disabledIdx}
         title="Today"
+        arrowSize="sm"
+        sliderTitleClassname="text-[#9C9CA4]"
       >
-        <div style={{  }}>
+        <div className="w-full">
           <main className="justify-center">
           <div className="p-[3rem] flex-col course gap-[2rem] align-center">
             <div className="relative">
@@ -75,42 +84,7 @@ const Today = () => {
                 </div>
                 <div className="text-[#9C9CA4]">10:00</div>
               </div>
-              <div className="flex justify-between">
-                <div className="flex gap-4">
-                  <div className="bg-[#F5F5F7] rounded-[8px] w-10 h-10 flex justify-center">
-                    2
-                  </div>
-                  <p className="text-[#9C9CA4]">Introduction</p>
-                </div>
-                <div className="text-[#9C9CA4]">10:00</div>
-              </div>
-              <div className="flex justify-between">
-                <div className="flex gap-4">
-                  <div className="bg-[#F5F5F7] rounded-[8px] w-10 h-10 flex justify-center">
-                    3
-                  </div>
-                  <p className="text-[#9C9CA4]">Introduction</p>
-                </div>
-                <div className="text-[#9C9CA4]">10:00</div>
-              </div>
-              <div className="flex justify-between">
-                <div className="flex gap-4">
-                  <div className="bg-[#F5F5F7] rounded-[8px] w-10 h-10 flex justify-center">
-                    4
-                  </div>
-                  <p className="text-[#9C9CA4]">Introduction</p>
-                </div>
-                <div className="text-[#9C9CA4]">10:00</div>
-              </div>
-              <div className="flex justify-between">
-                <div className="flex gap-4">
-                  <div className="bg-[#F5F5F7] rounded-[8px] w-10 h-10 flex justify-center">
-                    5
-                  </div>
-                  <p className="text-[#9C9CA4]">Introduction</p>
-                </div>
-                <div className="text-[#9C9CA4]">10:00</div>
-              </div>
+   
 
               <button className="rounded-2xl btn-primary flex gap justify-center mt-6">
                 Go to Detail

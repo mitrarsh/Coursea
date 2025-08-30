@@ -1,5 +1,5 @@
 import React from 'react'
-import ProgressCircle from "../progressCircle/ProgressCircle.js"
+import ProgressCircle from "../../utils/components/progressCircle/ProgressCircle.js"
 import { useTranslation } from "react-i18next";
 
 const RunningCourse = () => {

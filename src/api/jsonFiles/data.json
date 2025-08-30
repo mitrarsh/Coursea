@@ -1,0 +1,157 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Pristia",
+      "avatar": "https://example.com/avatar-pristia.jpg",
+      "runningCourses": 50,
+      "totalCourses": 100,
+      "activity": {
+        "week": "April 2022",
+        "hours": { "S": 2, "M": 3.5, "T": 2, "W": 4, "T2": 3, "F": 2.5, "S2": 3 }
+      }
+    },
+    {
+      "id": 2,
+      "name": "Michael",
+      "avatar": "https://example.com/avatar-michael.jpg",
+      "runningCourses": 32,
+      "totalCourses": 85,
+      "activity": {
+        "week": "April 2022",
+        "hours": { "S": 1, "M": 2, "T": 3, "W": 2.5, "T2": 4, "F": 3, "S2": 2 }
+      }
+    }
+  ],
+  "mentors": [
+    {
+      "id": 1,
+      "name": "Lincoln George",
+      "specialization": "UI/UX Design",
+      "courses": 100,
+      "rating": 4.5,
+      "reviews": 1200,
+      "isFollowed": false,
+      "avatar": "https://example.com/mentor-lincoln.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Gustavo Torff",
+      "specialization": "UI/UX Design",
+      "courses": 100,
+      "rating": 4.5,
+      "reviews": 1200,
+      "isFollowed": true,
+      "avatar": "https://example.com/mentor-gustavo.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Amelia Jones",
+      "specialization": "Product Design",
+      "courses": 80,
+      "rating": 4.7,
+      "reviews": 1500,
+      "isFollowed": false,
+      "avatar": "https://example.com/mentor-amelia.jpg"
+    }
+  ],
+  "courses": [
+    {
+      "id": 101,
+      "title": "Creating Beautiful Landing Page in 1 Hour",
+      "level": "Beginner",
+      "instructor": "Lincoln George",
+      "rating": 4.5,
+      "students": 350,
+      "thumbnail": "https://example.com/course-landing.jpg"
+    },
+    {
+      "id": 102,
+      "title": "Animation is the Key of Successful UI/UX Design",
+      "level": "Master",
+      "instructor": "Emerson Siphon",
+      "rating": 4.5,
+      "students": 600,
+      "thumbnail": "https://example.com/course-animation.jpg"
+    },
+    {
+      "id": 103,
+      "title": "Advanced Figma Prototyping",
+      "level": "Intermediate",
+      "instructor": "Amelia Jones",
+      "rating": 4.8,
+      "students": 750,
+      "thumbnail": "https://example.com/course-figma.jpg"
+    },
+    {
+      "id": 104,
+      "title": "Design Systems for Scalable Products",
+      "level": "Master",
+      "instructor": "Gustavo Torff",
+      "rating": 4.6,
+      "students": 920,
+      "thumbnail": "https://example.com/course-systems.jpg"
+    }
+  ],
+  "todayCourses": [
+    {
+      "id": 201,
+      "title": "UX Design: How To Implement Usability Testing",
+      "instructor": "Alfredo Rhiel Madsen",
+      "students": 500,
+      "modulesCount": 5,
+      "duration": "1h 30m",
+      "level": "Beginner",
+      "thumbnail": "https://example.com/course-usability.jpg",
+      "progress": { "completed": 0, "total": 5 },
+      "modules": [
+        { "id": 1, "title": "Introduction", "duration": "10:00", "completed": false },
+        { "id": 2, "title": "What is UX Design", "duration": "10:00", "completed": false },
+        { "id": 3, "title": "Usability Testing", "duration": "10:00", "completed": false },
+        { "id": 4, "title": "Create Usability Test", "duration": "30:00", "completed": false },
+        { "id": 5, "title": "How to Implement", "duration": "30:00", "completed": false }
+      ]
+    },
+    {
+      "id": 202,
+      "title": "Prototyping with Figma",
+      "instructor": "Amelia Jones",
+      "students": 700,
+      "modulesCount": 4,
+      "duration": "2h 00m",
+      "level": "Intermediate",
+      "thumbnail": "https://example.com/course-prototype.jpg",
+      "progress": { "completed": 1, "total": 4 },
+      "modules": [
+        { "id": 1, "title": "Introduction", "duration": "15:00", "completed": true },
+        { "id": 2, "title": "Wireframing Basics", "duration": "25:00", "completed": false },
+        { "id": 3, "title": "Interactive Components", "duration": "40:00", "completed": false },
+        { "id": 4, "title": "Prototype Presentation", "duration": "40:00", "completed": false }
+      ]
+    },
+    {
+      "id": 203,
+      "title": "Design Thinking in Practice",
+      "instructor": "Gustavo Torff",
+      "students": 1200,
+      "modulesCount": 6,
+      "duration": "3h 00m",
+      "level": "Master",
+      "thumbnail": "https://example.com/course-thinking.jpg",
+      "progress": { "completed": 2, "total": 6 },
+      "modules": [
+        { "id": 1, "title": "Introduction to Design Thinking", "duration": "20:00", "completed": true },
+        { "id": 2, "title": "Empathy Stage", "duration": "30:00", "completed": true },
+        { "id": 3, "title": "Define Stage", "duration": "25:00", "completed": false },
+        { "id": 4, "title": "Ideate Stage", "duration": "35:00", "completed": false },
+        { "id": 5, "title": "Prototype Stage", "duration": "35:00", "completed": false },
+        { "id": 6, "title": "Testing Stage", "duration": "35:00", "completed": false }
+      ]
+    }
+  ],
+  "calendar": {
+    "month": "April 2022",
+    "selectedDay": 14,
+    "days": [13, 14, 15, 16, 17, 18, 19]
+  }
+}
