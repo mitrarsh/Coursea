@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RootLayout from "./layouts/RootLayout.js";
 import Dashboard from "./pages/Dashboard.js";
+import Dummy from "./pages/Dummy.js";
 
 const App = () => {
   const { t } = useTranslation();
@@ -11,6 +12,7 @@ const App = () => {
       element: <RootLayout />, 
       children: [
       { path: "/", element: <Dashboard /> },
+      { path: "/dummy", element: <Dummy /> },
     ]},
   ]);
 

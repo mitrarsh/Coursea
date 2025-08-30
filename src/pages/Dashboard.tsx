@@ -3,6 +3,7 @@ import Activity from "../components/dashboard/Activity.js";
 import RunningCourse from "../components/dashboard/RunningCourse.js";
 import TodayBox from "../components/dashboard/TodayBox.js";
 
+
 const Dashboard = () => {
   const { t } = useTranslation();
 
@@ -20,6 +21,7 @@ const Dashboard = () => {
           <div className="display-flex flex-col gap-[2rem] md:flex-row md:flex-1">
             <RunningCourse />
             <Activity />
+
           </div>
         </div>
       </div>

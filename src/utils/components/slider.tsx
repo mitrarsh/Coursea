@@ -2,8 +2,8 @@ import type { Settings } from "react-slick";
 import { useRef } from "react";
 import Slider from "react-slick";
 
-// import "slick-carousel/slick/slick-theme.css";
-// import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
 
 type sliderProps = {
   settings: Settings;
@@ -27,7 +27,7 @@ const SliderWrapper = ({ settings, classname, disabledIdx, title, children, arro
         <h4 className={sliderTitleClassname}>{title}</h4>
         <div className="flex">
           <img
-            className={`-rotate-90 ${arrowClasses}`}
+            className={`-rotate-90 ${arrowClasses} cursor-pointer`}
             src={`/assets/icons/${
               disabledIdx ? "inactive" : "active"
             }/arrow-up.svg`}
@@ -35,7 +35,7 @@ const SliderWrapper = ({ settings, classname, disabledIdx, title, children, arro
             onClick={() => sliderRef.current?.slickPrev()}
           />
           <img
-            className={`rotate-90 ${arrowClasses}`}
+            className={`rotate-90 ${arrowClasses} cursor-pointer`}
             src={`/assets/icons/${
               disabledIdx ? "inactive" : "active"
             }/arrow-up.svg`}

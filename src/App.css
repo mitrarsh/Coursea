@@ -123,11 +123,11 @@ p {
   color: var(--clr-grey-5);
   margin: 0;
 }
-
+/* 
 @media screen and (min-width: 800px) {
 
 
-}
+} */
 
 /* me-made classes */
 .border-radius{
