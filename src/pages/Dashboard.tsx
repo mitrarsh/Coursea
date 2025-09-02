@@ -3,6 +3,7 @@ import Activity from "../components/dashboard/Activity.js";
 import RunningCourse from "../components/dashboard/RunningCourse.js";
 import TodayBox from "../components/dashboard/TodayBox.js";
 import Mentors from "../components/dashboard/Mentors.js";
+import MonthlyCourse from "../components/dashboard/MonthlyCourse.js";
 
 const Dashboard = () => {
   const { t } = useTranslation();
@@ -24,6 +25,7 @@ const Dashboard = () => {
           </div>
         </div>
         <Mentors />
+        <MonthlyCourse/>
       </div>
       <TodayBox />
     </div>

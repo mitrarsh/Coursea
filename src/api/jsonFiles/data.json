@@ -55,7 +55,7 @@
       "avatar": "https://example.com/mentor-amelia.jpg"
     }
   ],
-  "courses": [
+  "monthlyCourses": [
     {
       "id": 101,
       "title": "Creating Beautiful Landing Page in 1 Hour",
@@ -63,6 +63,7 @@
       "instructor": "Lincoln George",
       "rating": 4.5,
       "students": 350,
+      "modul":3,
       "thumbnail": "https://example.com/course-landing.jpg"
     },
     {
@@ -72,6 +73,7 @@
       "instructor": "Emerson Siphon",
       "rating": 4.5,
       "students": 600,
+      "modul":4,
       "thumbnail": "https://example.com/course-animation.jpg"
     },
     {
@@ -81,6 +83,7 @@
       "instructor": "Amelia Jones",
       "rating": 4.8,
       "students": 750,
+      "modul":3,
       "thumbnail": "https://example.com/course-figma.jpg"
     },
     {
@@ -90,6 +93,7 @@
       "instructor": "Gustavo Torff",
       "rating": 4.6,
       "students": 920,
+      "modul":5,
       "thumbnail": "https://example.com/course-systems.jpg"
     }
   ],

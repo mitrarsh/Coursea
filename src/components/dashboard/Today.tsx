@@ -49,14 +49,14 @@ const Today = () => {
                   </div>
                 </div>
                 <h3>{course.title}</h3>
-                <div className="w-auto">
+                <div className="w-auto display-flex flex-col gap-4">
                   <div className="flex flex-row gap-[20px]">
                     <div className="flex-1">
                       <p className="text-[#9C9CA4]">{course.instructor}</p>
                     </div>
                     <img
                       className="rounded-full w-[45px] h-[45px]"
-                      src="/assets/images/photo.svg"
+                      src="/assets/images/mentor.svg"
                       alt=""
                     />
                   </div>

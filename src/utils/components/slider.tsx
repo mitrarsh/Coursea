@@ -22,7 +22,7 @@ const SliderWrapper = ({ settings, classname, disabledIdx, title, children, arro
   const arrowClasses= arrowSize==="lg"?"w-8 h-8":""
 
   return (
-    <>
+    <section className="display-flex flex-col gap-8">
       <header className="flex justify-between">
         <h4 className={sliderTitleClassname}>{title}</h4>
         <div className="flex">
@@ -47,7 +47,7 @@ const SliderWrapper = ({ settings, classname, disabledIdx, title, children, arro
       <Slider ref={sliderRef} {...settings}>
         {children}
       </Slider>
-    </>
+    </section>
   );
 };
 

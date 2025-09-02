@@ -4,6 +4,7 @@ import { useMentors } from "../../utils/hooks/useMentors.js";
 
 const Mentors = () => {
   const [disabledIdx, setDisabledIdx] = useState(false);
+
   const sliderSettings = {
     dots: false,
     infinite: false,
@@ -19,7 +20,6 @@ const Mentors = () => {
       },
     },
   ],
-
   };
 
   const { data: mentors, isLoading, error } = useMentors();
@@ -31,21 +31,22 @@ const Mentors = () => {
   }
 
   return (
-        <div className=" max-w-2xl mx-auto md: md:max-w-7xl">
+        <div className=" max-w-2xl mx-auto md:w-full md:max-w-screen-lg">
       <SliderWrapper
         settings={sliderSettings}
         classname=""
         disabledIdx={disabledIdx}
         title="Today"
         arrowSize="lg"
-        sliderTitleClassname="text-[#141522] text-slate-600 text-[2.4rem]"
+        sliderTitleClassname="text-[#141522] text-slate-700 text-[2.4rem]"
       >
         {mentors.map((mentor) => (
-          <div className="p-[3rem] " key={mentor.id} >
-            <div className="flex flex-row gap-[20px]">
+          <div className="" key={mentor.id} >
+            <div className=" p-[3rem] me-10 bg-white rounded-2xl">
+              <div className="flex flex-row gap-[20px]">
               <img
                 className="rounded-full w-[45px] h-[45px]"
-                src="/assets/images/photo.svg"
+                src="/assets/images/mentor.svg"
                 alt=""
               />
               <div className="flex-1">
@@ -63,6 +64,7 @@ const Mentors = () => {
                 <img src="/assets/icons/active/Star-medium.svg" alt="" />
                 <p>{`${mentor.rating} (${mentor.reviews} Review)`}</p>
               </div>
+            </div>
             </div>
           </div>
         ))}
