@@ -3,9 +3,15 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RootLayout from "./layouts/RootLayout.js";
 import Dashboard from "./pages/Dashboard.js";
 import Dummy from "./pages/Dummy.js";
+import { useEffect } from "react";
 
 const App = () => {
-  const { t } = useTranslation();
+  const { t ,i18n } = useTranslation();
+
+  useEffect(() => {
+    const dir = i18n.language === "fa" ? "rtl" : "ltr";
+    document.documentElement.setAttribute("dir", dir);
+  }, [i18n.language]);
 
   const router = createBrowserRouter([
     { path: "/", 
