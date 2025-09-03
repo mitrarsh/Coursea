@@ -5,7 +5,7 @@ const Activity = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="activity w-full rounded-2xl bg-[#F5F5F7]  min-h-[200px] p-8 md:flex-1 md:h-full">
+    <div className="mx-auto activity min-w-[60rem] rounded-2xl bg-[#F5F5F7]  min-h-[200px] p-8 md:flex-1 md:h-full md:max-w-full">
       <div
         style={{
           display: "flex",

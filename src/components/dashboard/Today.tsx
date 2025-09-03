@@ -34,7 +34,7 @@ const Today = () => {
   return (
     <div
     dir={i18n.language === "fa" ? "rtl" : "ltr"}
-     className="bg-white p-8 rounded-2xl  display-flex flex-col gap-4 max-w-2xl  ">
+     className="max-w-[60rem] mx-auto bg-white p-8 rounded-2xl  display-flex flex-col gap-4 md:max-w-[50rem] mx-auto ">
       <SliderWrapper
         settings={sliderSettings}
         classname=""

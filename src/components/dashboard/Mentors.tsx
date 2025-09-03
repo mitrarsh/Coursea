@@ -31,12 +31,12 @@ const Mentors = () => {
   }
 
   return (
-        <div className=" max-w-2xl mx-auto md:w-full md:max-w-screen-lg">
+        <div className=" max-w-[60rem] mx-auto md:w-full md:max-w-screen-lg">
       <SliderWrapper
         settings={sliderSettings}
         classname=""
         disabledIdx={disabledIdx}
-        title="Today"
+        title="Mentors"
         arrowSize="lg"
         sliderTitleClassname="text-[#141522] text-slate-700 text-[2.4rem]"
       >

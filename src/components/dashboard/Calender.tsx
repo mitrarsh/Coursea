@@ -17,7 +17,7 @@ const Calender = () => {
   const days= [...Array(7)].map((_,i)=>addDays(currentWeek,i));
 
   return (
-    <div>
+    <div className="min-w-[60rem] mx-auto md:min-w-[50rem] ">
       <div className="bg-white p-8 rounded-2xl  display-flex flex-col gap-4">
         <div className="flex justify-between">
           <button

@@ -7,7 +7,7 @@ const RunningCourse = () => {
       const { t } = useTranslation();
 
   return (
-    <div className="runningCourse w-full bg-[#141522] h-full rounded-[10px] p-8 md:w-fit">
+    <div className="runningCourse min-w-[60rem] m-auto bg-[#141522] h-full rounded-[10px] p-8 md:min-w-fit">
         <h4 className="text-white ">{t("runningCourse")}</h4>
         <div className="runningCourse-progress display-flex justify-between md:flex-col">
           <h1 className="text-white">50</h1>

@@ -50,7 +50,7 @@ const SideBar = () => {
   ];
 
   return (
-    <div className={`flex-col align-middle bg-white p-8 h-screen gap-20 z-10 top-0 left-0 relative transition-all duration-300 ${menuIsOpen? "display-flex max-w-[256px]" : "hidden"} md:relative md:flex`}>
+    <div className={`display-flex overflow-hidden flex-col align-middle bg-white p-8 h-screen gap-20 z-10 top-0 left-0 relative transition-[min-width] duration-300 ${menuIsOpen? 'min-w-[28rem]' : "min-w-0 p-0"}  md:p-8 md:relative md:min-w-[30rem]`}>
       
       <div className="flex gap justify-center">
         <img src="/assets/images/Union.svg" alt="" />
