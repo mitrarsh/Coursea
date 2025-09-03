@@ -98,61 +98,71 @@
     }
   ],
   "todayCourses": [
-    {
-      "id": 201,
-      "title": "UX Design: How To Implement Usability Testing",
-      "instructor": "Alfredo Rhiel Madsen",
-      "students": 500,
-      "modulesCount": 5,
-      "duration": "1h 30m",
-      "level": "Beginner",
-      "thumbnail": "https://example.com/course-usability.jpg",
-      "progress": { "completed": 0, "total": 5 },
-      "modules": [
-        { "id": 1, "title": "Introduction", "duration": "10:00", "completed": false },
-        { "id": 2, "title": "What is UX Design", "duration": "10:00", "completed": false },
-        { "id": 3, "title": "Usability Testing", "duration": "10:00", "completed": false },
-        { "id": 4, "title": "Create Usability Test", "duration": "30:00", "completed": false },
-        { "id": 5, "title": "How to Implement", "duration": "30:00", "completed": false }
-      ]
-    },
-    {
-      "id": 202,
-      "title": "Prototyping with Figma",
-      "instructor": "Amelia Jones",
-      "students": 700,
-      "modulesCount": 4,
-      "duration": "2h 00m",
-      "level": "Intermediate",
-      "thumbnail": "https://example.com/course-prototype.jpg",
-      "progress": { "completed": 1, "total": 4 },
-      "modules": [
-        { "id": 1, "title": "Introduction", "duration": "15:00", "completed": true },
-        { "id": 2, "title": "Wireframing Basics", "duration": "25:00", "completed": false },
-        { "id": 3, "title": "Interactive Components", "duration": "40:00", "completed": false },
-        { "id": 4, "title": "Prototype Presentation", "duration": "40:00", "completed": false }
-      ]
-    },
-    {
-      "id": 203,
-      "title": "Design Thinking in Practice",
-      "instructor": "Gustavo Torff",
-      "students": 1200,
-      "modulesCount": 6,
-      "duration": "3h 00m",
-      "level": "Master",
-      "thumbnail": "https://example.com/course-thinking.jpg",
-      "progress": { "completed": 2, "total": 6 },
-      "modules": [
-        { "id": 1, "title": "Introduction to Design Thinking", "duration": "20:00", "completed": true },
-        { "id": 2, "title": "Empathy Stage", "duration": "30:00", "completed": true },
-        { "id": 3, "title": "Define Stage", "duration": "25:00", "completed": false },
-        { "id": 4, "title": "Ideate Stage", "duration": "35:00", "completed": false },
-        { "id": 5, "title": "Prototype Stage", "duration": "35:00", "completed": false },
-        { "id": 6, "title": "Testing Stage", "duration": "35:00", "completed": false }
-      ]
-    }
-  ],
+  {
+    "id": 201,
+    "title": "UX Design: How To Implement Usability Testing",
+    "titleFa": "طراحی تجربه کاربری: چگونه تست قابلیت استفاده را اجرا کنیم",
+    "instructor": "Alfredo Rhiel Madsen",
+    "instructorFa": "آلفردو ریهل مادسن",
+    "students": 500,
+    "modulesCount": 5,
+    "duration": "1h 30m",
+    "level": "Beginner",
+    "levelFa": "مبتدی",
+    "thumbnail": "https://example.com/course-usability.jpg",
+    "progress": { "completed": 0, "total": 5 },
+    "modules": [
+      { "id": 1, "title": "Introduction", "titleFa": "مقدمه", "duration": "10:00", "completed": false },
+      { "id": 2, "title": "What is UX Design", "titleFa": "طراحی تجربه کاربری چیست", "duration": "10:00", "completed": false },
+      { "id": 3, "title": "Usability Testing", "titleFa": "تست قابلیت استفاده", "duration": "10:00", "completed": false },
+      { "id": 4, "title": "Create Usability Test", "titleFa": "ایجاد تست قابلیت استفاده", "duration": "30:00", "completed": false },
+      { "id": 5, "title": "How to Implement", "titleFa": "چگونه اجرا کنیم", "duration": "30:00", "completed": false }
+    ]
+  },
+  {
+    "id": 202,
+    "title": "Prototyping with Figma",
+    "titleFa": "ساخت نمونه اولیه با فیگما",
+    "instructor": "Amelia Jones",
+    "instructorFa": "آملیا جونز",
+    "students": 700,
+    "modulesCount": 4,
+    "duration": "2h 00m",
+    "level": "Intermediate",
+    "levelFa": "متوسط",
+    "thumbnail": "https://example.com/course-prototype.jpg",
+    "progress": { "completed": 1, "total": 4 },
+    "modules": [
+      { "id": 1, "title": "Introduction", "titleFa": "مقدمه", "duration": "15:00", "completed": true },
+      { "id": 2, "title": "Wireframing Basics", "titleFa": "مبانی وایرفریم", "duration": "25:00", "completed": false },
+      { "id": 3, "title": "Interactive Components", "titleFa": "اجزای تعاملی", "duration": "40:00", "completed": false },
+      { "id": 4, "title": "Prototype Presentation", "titleFa": "ارائه نمونه اولیه", "duration": "40:00", "completed": false }
+    ]
+  },
+  {
+    "id": 203,
+    "title": "Design Thinking in Practice",
+    "titleFa": "تفکر طراحی در عمل",
+    "instructor": "Gustavo Torff",
+    "instructorFa": "گوستاوو ترف",
+    "students": 1200,
+    "modulesCount": 6,
+    "duration": "3h 00m",
+    "level": "Master",
+    "levelFa": "حرفه‌ای",
+    "thumbnail": "https://example.com/course-thinking.jpg",
+    "progress": { "completed": 2, "total": 6 },
+    "modules": [
+      { "id": 1, "title": "Introduction to Design Thinking", "titleFa": "مقدمه‌ای بر تفکر طراحی", "duration": "20:00", "completed": true },
+      { "id": 2, "title": "Empathy Stage", "titleFa": "مرحله همدلی", "duration": "30:00", "completed": true },
+      { "id": 3, "title": "Define Stage", "titleFa": "مرحله تعریف", "duration": "25:00", "completed": false },
+      { "id": 4, "title": "Ideate Stage", "titleFa": "مرحله ایده‌پردازی", "duration": "35:00", "completed": false },
+      { "id": 5, "title": "Prototype Stage", "titleFa": "مرحله نمونه‌سازی", "duration": "35:00", "completed": false },
+      { "id": 6, "title": "Testing Stage", "titleFa": "مرحله تست", "duration": "35:00", "completed": false }
+    ]
+  }
+]
+,
   "calendar": {
     "month": "April 2022",
     "selectedDay": 14,

@@ -1,9 +1,13 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
+import { useMenuStore } from "../utils/store/store.js";
 
 const SideBar = () => {
   const [activeOptionIdx, setActiveOptionIdx]= useState(0)
   const [activeSubOptionIdx, setActiveSubOptionIdx] = useState(-1)
+
+  const menuIsOpen= useMenuStore((state)=>state.menuIsOpen);
 
   const { t } = useTranslation();
 
@@ -14,46 +18,48 @@ const SideBar = () => {
       option: t("overview"),
     },
     {
-      path: "",
+      path: "/courses/explore-courses",
       iconPath: `/assets/icons/${activeOptionIdx===1? 'active': 'inactive'}/book.svg`,
       option: t("courses"),
       dropdown: [
         {
           option: t("exploreCourses"),
-          path: "",
+          path: "/courses/explore-courses",
         },
         {
           option: t("myCourses"),
-          path: "",
+          path: "/courses/my-courses",
         },
       ],
     },
     {
-      path: "",
+      path: "/mentors",
       iconPath: `/assets/icons/${activeOptionIdx===2? 'active': 'inactive'}/user-octagon.svg`,
       option: t("mentors"),
     },
     {
-      path: "",
+      path: "/message",
       iconPath: `/assets/icons/${activeOptionIdx===3? 'active': 'inactive'}/message.svg`,
       option: t("message"),
     },
     {
-      path: "",
+      path: "/setting",
       iconPath: `/assets/icons/${activeOptionIdx===4? 'active': 'inactive'}/setting-4.svg`,
       option: t("setting"),
     },
   ];
 
   return (
-    <div className="w-[256px] flex-col align-middle bg-white p-8 h-screen gap-20 fixed z-10 top-0 left-0 hidden md:relative md:flex">
+    <div className={`flex-col align-middle bg-white p-8 h-screen gap-20 z-10 top-0 left-0 relative transition-all duration-300 ${menuIsOpen? "display-flex max-w-[256px]" : "hidden"} md:relative md:flex`}>
+      
       <div className="flex gap justify-center">
         <img src="/assets/images/Union.svg" alt="" />
         <img src="/assets/images/Coursea.svg" alt="" />
       </div>
-      <div className="display-flex flex-col gap-2 flex-1 ">
+      <div className={`display-flex flex-col gap-2 flex-1`}>
         {menu.map((option,i) => (
-          <div key={i} className={`gap-4 display-flex flex-col rounded-[10px] transition-all duration-300  ${activeOptionIdx===i?'bg-[#F5F5F7]':'bg-white'}`} onClick={()=>{activeOptionIdx!==i? setActiveOptionIdx(i):null}}>
+          <Link to={option.path}>
+            <div key={i} className={`gap-4 display-flex flex-col rounded-[10px] transition-all duration-300 cursor-pointer ${activeOptionIdx===i?'bg-[#F5F5F7]':'bg-white'}`} onClick={()=>{activeOptionIdx!==i? setActiveOptionIdx(i):null}}>
             <div className="menu-option border-radius flex space-between ">
               <div className="flex gap ">
                 <img src={option.iconPath} alt="" />
@@ -66,6 +72,7 @@ const SideBar = () => {
             <div className={`overflow-hidden transition-all duration-300 ${activeOptionIdx===i?'max-h-40':'max-h-0'}`}>
               {option.dropdown
               ? option.dropdown.map((option, j) => (
+                  <Link to={option.path}>
                   <div key={j} className="gap-2 display-flex flex-col" onClick={()=>{activeSubOptionIdx!==j? setActiveSubOptionIdx(j):null}}>
                     <div className="menu-option border-radius flex space-between">
                       <div className="flex gap">
@@ -73,13 +80,16 @@ const SideBar = () => {
                       </div>
                     </div>
                   </div>
+                  </Link>
                 ))
               : null}
             </div>
           </div>
+          
+          </Link>
         ))}
       </div>
-      <div className="w-[196px] h-[150px] bg-[#141522] rounded-[1rem] relative p-7 flex">
+      <div className="w-[196px] h-[150px] bg-[#141522] rounded-[1rem] p-7 flex fixed bottom-6">
         <div className="w-8/12 gap-4 display-flex flex-col">
             <img src="/assets/images/Upgrade to Pro.svg" alt="" />
             <p className="text-slate-600 font-medium text-nowrap">Get 1 Month Free</p>

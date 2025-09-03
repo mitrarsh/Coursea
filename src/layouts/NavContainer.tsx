@@ -1,18 +1,23 @@
 import { useTranslation } from "react-i18next";
-import LangSwitcher from "../pages/LangSwitcher.js";
+import LangSwitcher from "../language/LangSwitcher.js";
+import { useMenuStore } from "../utils/store/store.js";
 
 const NavContainer = () => {
-    const { t } = useTranslation();
+  const { t } = useTranslation();
+
+  const menuIsOpen = useMenuStore((state) => state.menuIsOpen);
+  const openMenu = useMenuStore((state) => state.openMenu);
+
   return (
     <nav className="flex flex-row p-10 pt-16 bg-white justify-between flex-1 md:bg-[#FCFCFC]">
-      <div className="menu-icon cursor-pointer md:hidden">
-        <img src="assets/icons/menu.svg" alt="" />
+      <div className="menu-icon cursor-pointer md:hidden" onClick={openMenu}>
+        <img src={`assets/icons/${menuIsOpen?"close.svg":"menu.svg"}`} alt="" />
       </div>
       <div className="title hidden md:flex">
         <h1> {t("greeting")}</h1>
       </div>
-      <div className="flex flex-row gap-[4rem]" >
-        <LangSwitcher/>
+      <div className="flex flex-row gap-[4rem]">
+        <LangSwitcher />
         <div className="search">
           <img src="assets/icons/search-normal.svg" alt="" />
         </div>

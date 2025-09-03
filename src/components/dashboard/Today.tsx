@@ -1,8 +1,18 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SliderWrapper from "../../utils/components/slider.js";
 import { useTodayCourses } from "../../utils/hooks/useTodayCourses.js";
+import { useTranslation } from "react-i18next";
 
 const Today = () => {
+  
+  const {t,i18n}= useTranslation();
+  const en= i18n.language==="en";
+
+    useEffect(() => {
+      const dir = i18n.language === "fa" ? "rtl" : "ltr";
+      document.documentElement.setAttribute("dir", dir);
+    }, [i18n.language]);
+
   const [disabledIdx, setDisabledIdx] = useState(false);
   const sliderSettings = {
     dots: false,
@@ -22,7 +32,9 @@ const Today = () => {
   }
 
   return (
-    <div className="bg-white p-8 rounded-2xl  display-flex flex-col gap-4 max-w-2xl mx-auto ">
+    <div
+    dir={i18n.language === "fa" ? "rtl" : "ltr"}
+     className="bg-white p-8 rounded-2xl  display-flex flex-col gap-4 max-w-2xl  ">
       <SliderWrapper
         settings={sliderSettings}
         classname=""
@@ -33,7 +45,7 @@ const Today = () => {
       >
         {todayCourses.map((course) => (
           <div>
-            <main className="justify-center">
+            <main className="justify-center ">
               <div className="p-[3rem] flex-col course gap-[2rem] align-center">
                 <div className="relative">
                   <img
@@ -41,9 +53,9 @@ const Today = () => {
                     src="/assets/images/photo.svg"
                     alt=""
                   />
-                  <div className="range-box px-[10px] py-[6px] rounded-lg absolute bottom-3 left-3 bg-white">
+                  <div className="range-box px-[10px] py-[6px] rounded-lg absolute bottom-3 start-3 w-fit bg-white">
                     <div className="flex gap">
-                      <p>{course.level}</p>
+                      <p>{en?course.level:course.levelFa}</p>
                       <img src={`/assets/images/${course.level==="Beginner"?"range-beginner.svg":course.level==="Intermediate"?"range-intermediate.svg":"range-advance.svg"}`} alt="" />
                     </div>
                   </div>
@@ -52,7 +64,7 @@ const Today = () => {
                 <div className="w-auto display-flex flex-col gap-4">
                   <div className="flex flex-row gap-[20px]">
                     <div className="flex-1">
-                      <p className="text-[#9C9CA4]">{course.instructor}</p>
+                      <p className="text-[#9C9CA4]">{en?course.instructor:course.instructorFa}</p>
                     </div>
                     <img
                       className="rounded-full w-[45px] h-[45px]"
@@ -63,7 +75,7 @@ const Today = () => {
                   <div className="flex justify-between">
                     <div className="flex gap-[5px]">
                       <img src="/assets/icons/user.svg" alt="" />
-                      <p className="text-nowrap">{course.students} students</p>
+                      <p className="text-nowrap">{course.students} {t("students")}</p>
                     </div>
                     <div className="flex gap-[5px]">
                       <img src="/assets/icons/document.svg" alt="" />
