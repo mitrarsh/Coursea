@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   addMonths,
   subMonths,
@@ -11,8 +11,10 @@ import {
 const Calender = () => {
   const [currentMonth, setCurrentMonth]= useState(new Date());
   const [isSelected, setIsSelected] = useState(new Date());
-  const [currentWeek, setCurrentWeek]=useState(startOfWeek(isSelected,{weekStartsOn:0}))
+  const [currentWeek, setCurrentWeek]=useState(startOfWeek(isSelected,{weekStartsOn:0}));
 
+    useEffect(()=>{
+    setCurrentMonth(currentWeek)},[currentWeek])
 
   const days= [...Array(7)].map((_,i)=>addDays(currentWeek,i));
 

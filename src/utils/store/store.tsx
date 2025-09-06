@@ -14,7 +14,7 @@ export const useMenuStore = create<MenuState>((set) => ({
       menuIsOpen: !state.menuIsOpen,
     }));
   },
-  openBar: "overview",
+  openBar: "Overview",
   setOpenBar: (bar: string) =>
     set(() => ({
       openBar: bar,

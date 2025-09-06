@@ -8,6 +8,8 @@ const SideBar = () => {
   const [activeSubOptionIdx, setActiveSubOptionIdx] = useState(-1)
 
   const menuIsOpen= useMenuStore((state)=>state.menuIsOpen);
+  const openBar= useMenuStore((state)=>state.openBar);
+  const setOpenBar= useMenuStore((state)=>state.setOpenBar);
 
   const { t } = useTranslation();
 
@@ -15,19 +17,19 @@ const SideBar = () => {
     {
       path: "",
       iconPath: `/assets/icons/${activeOptionIdx===0? 'active': 'inactive'}/element-4.svg`,
-      option: t("overview"),
+      option: "Overview",
     },
     {
       path: "/courses/explore-courses",
       iconPath: `/assets/icons/${activeOptionIdx===1? 'active': 'inactive'}/book.svg`,
-      option: t("courses"),
+      option: "Courses",
       dropdown: [
         {
-          option: t("exploreCourses"),
+          option: "Explore Courses",
           path: "/courses/explore-courses",
         },
         {
-          option: t("myCourses"),
+          option: "My Courses",
           path: "/courses/my-courses",
         },
       ],
@@ -35,17 +37,17 @@ const SideBar = () => {
     {
       path: "/mentors",
       iconPath: `/assets/icons/${activeOptionIdx===2? 'active': 'inactive'}/user-octagon.svg`,
-      option: t("mentors"),
+      option: "Mentors",
     },
     {
       path: "/message",
       iconPath: `/assets/icons/${activeOptionIdx===3? 'active': 'inactive'}/message.svg`,
-      option: t("message"),
+      option: "Message",
     },
     {
       path: "/setting",
       iconPath: `/assets/icons/${activeOptionIdx===4? 'active': 'inactive'}/setting-4.svg`,
-      option: t("setting"),
+      option: "Setting",
     },
   ];
 
@@ -58,8 +60,8 @@ const SideBar = () => {
       </div>
       <div className={`display-flex flex-col gap-2 flex-1`}>
         {menu.map((option,i) => (
-          <Link to={option.path}>
-            <div key={i} className={`gap-4 display-flex flex-col rounded-[10px] transition-all duration-300 cursor-pointer ${activeOptionIdx===i?'bg-[#F5F5F7]':'bg-white'}`} onClick={()=>{activeOptionIdx!==i? setActiveOptionIdx(i):null}}>
+          <Link to={option.path} >
+            <div onClick={()=>{activeOptionIdx!==i? setActiveOptionIdx(i):null; setOpenBar(option.option); console.log(openBar)}} key={i} className={`gap-4 display-flex flex-col rounded-[10px] transition-all duration-300 cursor-pointer ${activeOptionIdx===i?'bg-[#F5F5F7]':'bg-white'}`}>
             <div className="menu-option border-radius flex space-between ">
               <div className="flex gap ">
                 <img src={option.iconPath} alt="" />
@@ -72,8 +74,8 @@ const SideBar = () => {
             <div className={`overflow-hidden transition-all duration-300 ${activeOptionIdx===i?'max-h-40':'max-h-0'}`}>
               {option.dropdown
               ? option.dropdown.map((option, j) => (
-                  <Link to={option.path}>
-                  <div key={j} className="gap-2 display-flex flex-col" onClick={()=>{activeSubOptionIdx!==j? setActiveSubOptionIdx(j):null}}>
+                  <Link to={option.path} >
+                  <div onClick={()=>{activeSubOptionIdx!==j? setActiveSubOptionIdx(j):null; setOpenBar(option.option)}} key={j} className="gap-2 display-flex flex-col" >
                     <div className="menu-option border-radius flex space-between">
                       <div className="flex gap">
                         <p className={`transition-all duration-300 ${activeSubOptionIdx===j?'text-[#141522]': 'text-[#9C9CA4]'}`}>{option.option}</p>

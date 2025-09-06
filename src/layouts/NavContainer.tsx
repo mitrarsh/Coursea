@@ -7,6 +7,7 @@ const NavContainer = () => {
 
   const menuIsOpen = useMenuStore((state) => state.menuIsOpen);
   const openMenu = useMenuStore((state) => state.openMenu);
+  const openBar = useMenuStore((state) => state.openBar);
 
   return (
     <nav className="flex flex-row p-10 pt-16 bg-white justify-between flex-1 md:bg-[#FCFCFC]">
@@ -14,7 +15,7 @@ const NavContainer = () => {
         <img src={`assets/icons/${menuIsOpen?"close.svg":"menu.svg"}`} alt="" />
       </div>
       <div className="title hidden md:flex">
-        <h1> {t("greeting")}</h1>
+        <h1> {openBar==="Overview"? "Welcome, Mitra": openBar}</h1>
       </div>
       <div className="flex flex-row gap-[4rem]">
         <LangSwitcher />
