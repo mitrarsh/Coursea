@@ -9,8 +9,9 @@ const NavContainer = () => {
   const openMenu = useMenuStore((state) => state.openMenu);
   const openBar = useMenuStore((state) => state.openBar);
 
+  console.log(openBar)
   return (
-    <nav className="flex flex-row p-10 pt-16 bg-white justify-between flex-1 md:bg-[#FCFCFC]">
+    <nav className={`flex flex-row p-10 pt-16 justify-between flex-1  ${openBar.toLowerCase()==="overview"?"bg-[#FCFCFC]":"bg-white"}`}>
       <div className="menu-icon cursor-pointer md:hidden" onClick={openMenu}>
         <img src={`assets/icons/${menuIsOpen?"close.svg":"menu.svg"}`} alt="" />
       </div>

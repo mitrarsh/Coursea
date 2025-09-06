@@ -55,6 +55,141 @@
       "avatar": "https://example.com/mentor-amelia.jpg"
     }
   ],
+  "exploreCourses": [
+    {
+      "id": 101,
+      "title": "Creating Beautiful Landing Page in 1 Hour",
+      "category": "UI/UX Design",
+      "level": "Beginner",
+      "instructor": "Lincoln George",
+      "rating": 4.5,
+      "reviews": 1200,
+      "students": 350,
+      "modulesCount": 3,
+      "duration": "1h 00m",
+      "thumbnail": "https://example.com/course-landing.jpg",
+      "description": "Learn how to quickly design and build visually appealing landing pages using modern design principles. This course focuses on layout, typography, and design systems for beginners who want to make their first professional project.",
+      "keyPoints": [
+        "Understanding layout grids and typography",
+        "Working with reusable UI components",
+        "Practical exercise: build a landing page in 1 hour"
+      ]
+    },
+    {
+      "id": 102,
+      "title": "Animation is the Key of Successful UI/UX Design",
+      "category": "Interaction Design",
+      "level": "Master",
+      "instructor": "Emerson Siphon",
+      "rating": 4.5,
+      "reviews": 5000,
+      "students": 600,
+      "modulesCount": 4,
+      "duration": "1h 30m",
+      "thumbnail": "https://example.com/course-animation.jpg",
+      "description": "Learn how to enrich user experiences with animations that make applications more interactive and engaging. You’ll practice designing interactive prototypes, adding animations, and using Figma with Flutter SDK.",
+      "keyPoints": [
+        "Understand the basics of Prototyping & Animation",
+        "Create interactive mockups and prototypes",
+        "Presenting designs using animation for mobile apps"
+      ]
+    },
+    {
+      "id": 103,
+      "title": "Advanced Figma Prototyping",
+      "category": "Prototyping",
+      "level": "Intermediate",
+      "instructor": "Amelia Jones",
+      "rating": 4.8,
+      "reviews": 1500,
+      "students": 750,
+      "modulesCount": 3,
+      "duration": "2h 00m",
+      "thumbnail": "https://example.com/course-figma.jpg",
+      "description": "Deepen your knowledge of Figma by learning advanced prototyping techniques. Work with interactive components, complex flows, and advanced triggers to create lifelike prototypes.",
+      "keyPoints": [
+        "Wireframing and complex flows in Figma",
+        "Using variants and interactive components",
+        "Building advanced presentation-ready prototypes"
+      ]
+    },
+    {
+      "id": 104,
+      "title": "Design Systems for Scalable Products",
+      "category": "Product Design",
+      "level": "Master",
+      "instructor": "Gustavo Torff",
+      "rating": 4.6,
+      "reviews": 1200,
+      "students": 920,
+      "modulesCount": 5,
+      "duration": "3h 00m",
+      "thumbnail": "https://example.com/course-systems.jpg",
+      "description": "Learn how to build scalable design systems that improve consistency and efficiency in product design teams. This course covers tokens, reusable components, and documenting a system for collaboration.",
+      "keyPoints": [
+        "Introduction to scalable design systems",
+        "Managing design tokens and component libraries",
+        "Best practices for team collaboration"
+      ]
+    },
+    {
+      "id": 201,
+      "title": "UX Design: How To Implement Usability Testing",
+      "category": "UX Research",
+      "level": "Beginner",
+      "instructor": "Alfredo Rhiel Madsen",
+      "rating": 4.5,
+      "reviews": 2000,
+      "students": 500,
+      "modulesCount": 5,
+      "duration": "1h 30m",
+      "thumbnail": "https://example.com/course-usability.jpg",
+      "description": "A beginner-friendly guide to usability testing, covering theory and practice. Learn how to design usability tests, conduct sessions, and analyze feedback to improve user experiences.",
+      "keyPoints": [
+        "Introduction to UX and usability testing",
+        "Designing effective usability tests",
+        "Applying test results to product improvement"
+      ]
+    },
+    {
+      "id": 202,
+      "title": "Prototyping with Figma",
+      "category": "Prototyping",
+      "level": "Intermediate",
+      "instructor": "Amelia Jones",
+      "rating": 4.7,
+      "reviews": 1800,
+      "students": 700,
+      "modulesCount": 4,
+      "duration": "2h 00m",
+      "thumbnail": "https://example.com/course-prototype.jpg",
+      "description": "Learn how to use Figma for prototyping, from basic wireframes to interactive components. Includes real-world exercises and best practices for presenting prototypes to stakeholders.",
+      "keyPoints": [
+        "Wireframing basics",
+        "Creating interactive components",
+        "Presenting prototypes to teams and clients"
+      ]
+    },
+    {
+      "id": 203,
+      "title": "Design Thinking in Practice",
+      "category": "Design Thinking",
+      "level": "Master",
+      "instructor": "Gustavo Torff",
+      "rating": 4.8,
+      "reviews": 2500,
+      "students": 1200,
+      "modulesCount": 6,
+      "duration": "3h 00m",
+      "thumbnail": "https://example.com/course-thinking.jpg",
+      "description": "A comprehensive course on Design Thinking, covering all stages from empathy to testing. Practice applying design thinking principles to real-world problems.",
+      "keyPoints": [
+        "Understanding the 5 stages of design thinking",
+        "Hands-on activities for each stage",
+        "Practical examples from real-world case studies"
+      ]
+    }
+  ],
   "monthlyCourses": [
     {
       "id": 101,

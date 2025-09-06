@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { useMenuStore } from "../utils/store/store.js";
@@ -51,17 +51,37 @@ const SideBar = () => {
     },
   ];
 
+    useEffect(() => {
+    menu.forEach((item, i) => {
+      if (item.dropdown) {
+        item.dropdown.forEach((sub, j) => {
+          if (location.pathname.startsWith(sub.path)) {
+            setActiveOptionIdx(i);
+            setActiveSubOptionIdx(j);
+            setOpenBar(sub.option);
+          }
+        });
+      }
+      if (location.pathname.startsWith(item.path) && !item.dropdown) {
+        setActiveOptionIdx(i);
+        setActiveSubOptionIdx(-1);
+        setOpenBar(item.option);
+      }
+    });
+  }, [location.pathname]);
+
+
   return (
-    <div className={`display-flex overflow-hidden flex-col align-middle bg-white p-8 h-screen gap-20 z-10 top-0 left-0 relative transition-[min-width] duration-300 ${menuIsOpen? 'min-w-[28rem]' : "min-w-0 p-0"}  md:p-8 md:relative md:min-w-[30rem]`}>
+    <div className={`border-r border-[#F7F7F7] display-flex overflow-hidden flex-col align-middle bg-white p-8 h-screen gap-20 z-10 top-0 left-0 relative transition-[min-width] duration-300 ${menuIsOpen? 'min-w-[28rem]' : "min-w-0 p-0"}  md:p-8 md:relative md:min-w-[30rem]`}>
       
       <div className="flex gap justify-center">
         <img src="/assets/images/Union.svg" alt="" />
         <img src="/assets/images/Coursea.svg" alt="" />
       </div>
-      <div className={`display-flex flex-col gap-2 flex-1`}>
+      <div className={`display-flex flex-col gap-2 flex-1 `}>
         {menu.map((option,i) => (
           <Link to={option.path} >
-            <div onClick={()=>{activeOptionIdx!==i? setActiveOptionIdx(i):null; setOpenBar(option.option); console.log(openBar)}} key={i} className={`gap-4 display-flex flex-col rounded-[10px] transition-all duration-300 cursor-pointer ${activeOptionIdx===i?'bg-[#F5F5F7]':'bg-white'}`}>
+            <div onClick={()=>{setOpenBar(option.option)}} key={i} className={`gap-4 display-flex flex-col rounded-[10px] transition-all duration-300 cursor-pointer ${activeOptionIdx===i?'bg-[#F5F5F7]':'bg-white'}`}>
             <div className="menu-option border-radius flex space-between ">
               <div className="flex gap ">
                 <img src={option.iconPath} alt="" />
@@ -73,12 +93,12 @@ const SideBar = () => {
             </div>
             <div className={`overflow-hidden transition-all duration-300 ${activeOptionIdx===i?'max-h-40':'max-h-0'}`}>
               {option.dropdown
-              ? option.dropdown.map((option, j) => (
-                  <Link to={option.path} >
-                  <div onClick={()=>{activeSubOptionIdx!==j? setActiveSubOptionIdx(j):null; setOpenBar(option.option)}} key={j} className="gap-2 display-flex flex-col" >
+              ? option.dropdown.map((subOption, j) => (
+                  <Link to={subOption.path} >
+                  <div onClick={()=>{activeSubOptionIdx!==j? setActiveSubOptionIdx(j):null; }} key={j} className="gap-2 display-flex flex-col" >
                     <div className="menu-option border-radius flex space-between">
                       <div className="flex gap">
-                        <p className={`transition-all duration-300 ${activeSubOptionIdx===j?'text-[#141522]': 'text-[#9C9CA4]'}`}>{option.option}</p>
+                        <p className={`transition-all duration-300 ${activeSubOptionIdx===j?'text-[#141522]': 'text-[#9C9CA4]'}`}>{subOption.option}</p>
                       </div>
                     </div>
                   </div>
