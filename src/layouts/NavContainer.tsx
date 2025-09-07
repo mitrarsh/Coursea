@@ -19,7 +19,6 @@ const NavContainer = () => {
         <h1> {openBar==="Overview"? "Welcome, Mitra": openBar}</h1>
       </div>
       <div className="flex flex-row gap-[4rem]">
-        <LangSwitcher />
         <div className="search">
           <img src="assets/icons/search-normal.svg" alt="" />
         </div>

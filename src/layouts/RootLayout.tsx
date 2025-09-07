@@ -4,7 +4,7 @@ import SideBar from "./SideBar.js";
 
 const RootLayout = () => {
   return (
-    <main className="display-flex">
+    <main className="display-flex flex-row ">
       <SideBar />
       <div className="flex-1">
         <NavContainer/>
