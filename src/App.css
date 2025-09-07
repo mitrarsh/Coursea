@@ -102,7 +102,7 @@ h4 {
   font-family: var(--ff-primary);
 }
 h1 {
-  font-size: 3.2rem;
+  font-size: 2.5rem;
   font-weight: 700;
   
 }
@@ -123,11 +123,13 @@ p {
   color: var(--clr-grey-5);
   margin: 0;
 }
-/* 
+
 @media screen and (min-width: 800px) {
+body{
+  font-size:1rem
+}
 
-
-} */
+} 
 
 /* me-made classes */
 .border-radius{

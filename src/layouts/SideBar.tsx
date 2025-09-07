@@ -72,9 +72,10 @@ const SideBar = () => {
 
 
   return (
-    <div className={`border-r border-[#F7F7F7] display-flex overflow-hidden flex-col align-middle bg-white p-8 h-screen gap-20 z-10 top-0 left-0 relative transition-[min-width] duration-300 ${menuIsOpen? 'min-w-[28rem]' : "min-w-0 p-0"}  md:p-8 md:relative md:min-w-[30rem]`}>
-      
-      <div className="flex gap justify-center">
+    <div className={`border-r border-[#F7F7F7] overflow-hidden flex-col align-middle bg-white p-8 h-screen gap-20 z-10 top-0 left-0 transition-all duration-300
+  ${menuIsOpen ? "display-flex min-w-[28rem]" : "hidden"} md:flex md:relative md:min-w-[20rem]`}
+>
+     <div className="flex gap justify-center mx-4 mt-4">
         <img src="/assets/images/Union.svg" alt="" />
         <img src="/assets/images/Coursea.svg" alt="" />
       </div>
@@ -122,4 +123,7 @@ const SideBar = () => {
   );
 };
 
+
+
 export default SideBar;
+
