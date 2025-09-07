@@ -38,7 +38,7 @@ const MonthlyCourse = () => {
         disabledIdx={disabledIdx}
         title="Monthly Courses"
         arrowSize="lg"
-        sliderTitleClassname="text-[#141522] text-slate-700 text-[2.4rem]"
+        sliderTitleClassname="text-[#141522] text-slate-700 text-[2rem]"
       >
         {monthlyCourses.map((course) => (
           <div

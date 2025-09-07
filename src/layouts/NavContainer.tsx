@@ -11,7 +11,7 @@ const NavContainer = () => {
 
   console.log(openBar)
   return (
-    <nav className={`flex flex-row p-10 pt-16 justify-between w-screen flex-1  ${openBar.toLowerCase()==="overview"?"bg-[#FCFCFC]":"bg-white"}`}>
+    <nav className={`flex flex-row p-10 pt-16 w-screen md:w-full justify-between flex-1  ${openBar.toLowerCase()==="overview"?"bg-[#FCFCFC]":"bg-white"}`}>
       <div className="menu-icon cursor-pointer md:hidden" onClick={openMenu}>
         <img src={`assets/icons/${menuIsOpen?"close.svg":"menu.svg"}`} alt="" />
       </div>

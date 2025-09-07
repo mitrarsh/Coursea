@@ -38,7 +38,7 @@ const Mentors = () => {
         disabledIdx={disabledIdx}
         title="Mentors"
         arrowSize="lg"
-        sliderTitleClassname="text-[#141522] text-slate-700 text-[2.4rem]"
+        sliderTitleClassname="text-[#141522] text-slate-700 text-[2rem]"
       >
         {mentors.map((mentor) => (
           <div className="" key={mentor.id} >

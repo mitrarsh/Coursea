@@ -10,7 +10,7 @@ const Dashboard = () => {
 
   return (
     <div className="md:flex">
-      <div className="p-8 display-flex flex-col gap-8 flex-1">
+      <div className="p-8 display-flex flex-col gap-8 flex-1 w-full">
         <h4 className="text-[#9C9CA4] text-[1.8rem]">
           {t("letslearnsomethingnewtoday")}
         </h4>
