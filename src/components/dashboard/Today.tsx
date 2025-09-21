@@ -34,7 +34,7 @@ const Today = () => {
   return (
     <div
     dir={i18n.language === "fa" ? "rtl" : "ltr"}
-     className="max-w-[60rem] mx-auto bg-white p-8 rounded-2xl  display-flex flex-col gap-4 md:max-w-[50rem] mx-auto ">
+     className="max-w-[60rem] mx-auto bg-white p-8 rounded-2xl  display-flex flex-col gap-4 md:max-w-[50rem] ">
       <SliderWrapper
         settings={sliderSettings}
         classname=""
@@ -50,13 +50,13 @@ const Today = () => {
                 <div className="relative">
                   <img
                     className="rounded-[10px] w-full"
-                    src="/assets/images/photo.svg"
+                    src="assets/images/photo.svg"
                     alt=""
                   />
                   <div className="range-box px-[10px] py-[6px] rounded-lg absolute bottom-3 start-3 w-fit bg-white">
                     <div className="flex gap">
                       <p>{en?course.level:course.levelFa}</p>
-                      <img src={`/assets/images/${course.level==="Beginner"?"range-beginner.svg":course.level==="Intermediate"?"range-intermediate.svg":"range-advance.svg"}`} alt="" />
+                      <img src={`assets/images/${course.level==="Beginner"?"range-beginner.svg":course.level==="Intermediate"?"range-intermediate.svg":"range-advance.svg"}`} alt="" />
                     </div>
                   </div>
                 </div>
@@ -68,21 +68,21 @@ const Today = () => {
                     </div>
                     <img
                       className="rounded-full w-[45px] h-[45px]"
-                      src="/assets/images/mentor.svg"
+                      src="assets/images/mentor.svg"
                       alt=""
                     />
                   </div>
                   <div className="flex justify-between">
                     <div className="flex gap-[5px]">
-                      <img src="/assets/icons/user.svg" alt="" />
+                      <img src="assets/icons/user.svg" alt="" />
                       <p className="text-nowrap">{course.students} {t("students")}</p>
                     </div>
                     <div className="flex gap-[5px]">
-                      <img src="/assets/icons/document.svg" alt="" />
+                      <img src="assets/icons/document.svg" alt="" />
                       <p className="text-nowrap">{course.modulesCount} modul</p>
                     </div>
                     <div className="flex gap-[5px]">
-                      <img src="/assets/icons/clock.svg" alt="" />
+                      <img src="assets/icons/clock.svg" alt="" />
                       <p className="text-nowrap">{course.duration}</p>
                     </div>
                   </div>

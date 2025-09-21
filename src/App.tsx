@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import RootLayout from "./layouts/RootLayout.js";
 import Dashboard from "./pages/Dashboard.js";
 import Dummy from "./pages/Dummy.js";
@@ -18,7 +18,7 @@ const App = () => {
     document.documentElement.setAttribute("dir", dir);
   }, [i18n.language]);
 
-  const router = createBrowserRouter([
+  const router = createHashRouter([
     { path: "/", 
       element: <RootLayout />, 
       children: [
