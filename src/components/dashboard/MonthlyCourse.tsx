@@ -49,13 +49,13 @@ const MonthlyCourse = () => {
               <div className="relative">
                 <img
                   className="rounded-[10px] m-auto w-full"
-                  src="/assets/images/photo.svg"
+                  src="assets/images/photo.svg"
                   alt=""
                 />
                 <div className="range-box px-[10px] py-[6px] rounded-lg absolute bottom-3 left-3 bg-white">
                   <div className="flex gap">
                     <p>{course.level}</p>
-                    <img src={`/assets/images/${course.level==="Beginner"?"range-beginner.svg":course.level==="Intermediate"?"range-intermediate.svg":"range-advance.svg"}`} alt="" />
+                    <img src={`assets/images/${course.level==="Beginner"?"range-beginner.svg":course.level==="Intermediate"?"range-intermediate.svg":"range-advance.svg"}`} alt="" />
                   </div>
                 </div>
               </div>
@@ -64,24 +64,24 @@ const MonthlyCourse = () => {
                 <div className="flex flex-row gap-[20px]">
                   <img
                     className="rounded-full w-[45px] h-[45px]"
-                    src="/assets/images/photo.svg"
+                    src="assets/images/photo.svg"
                     alt=""
                   />
                   <div className="flex-1">
                     <p className="text-[#9C9CA4]">{course.instructor}</p>
                   </div>
                   <div className="flex gap-[5px]">
-                    <img src="/assets/icons/active/Star-medium.svg" alt="" />
+                    <img src="assets/icons/active/Star-medium.svg" alt="" />
                     <p>{course.rating}</p>
                   </div>
                 </div>
                 <div className="flex justify-between">
                   <div className="flex gap-[5px]">
-                    <img src="/assets/icons/user.svg" alt="" />
+                    <img src="assets/icons/user.svg" alt="" />
                     <p>{course.students} Students</p>
                   </div>
                   <div className="flex gap-[5px]">
-                    <img src="/assets/icons/clock.svg" alt="" />
+                    <img src="assets/icons/clock.svg" alt="" />
                     <p>{course.modul} Modul</p>
                   </div>
                 </div>

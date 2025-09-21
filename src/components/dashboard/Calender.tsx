@@ -25,12 +25,12 @@ const Calender = () => {
           <button
             onClick={()=>setCurrentWeek(subDays(currentWeek,7))}
             >
-              <img className="-rotate-90" src="/assets/icons/arrow-up.svg" alt="" />
+              <img className="-rotate-90" src="assets/icons/arrow-up.svg" alt="" />
             </button>
           <h4>{format(currentMonth, "MMMM yyyy")}</h4>
           <button
             onClick={()=>setCurrentWeek(addDays(currentWeek,7))}>
-              <img className="rotate-90" src="/assets/icons/arrow-up.svg" alt="" />
+              <img className="rotate-90" src="assets/icons/arrow-up.svg" alt="" />
             </button>
         </div>
         <div className="flex justify-between gap">

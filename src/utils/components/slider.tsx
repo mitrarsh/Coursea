@@ -28,7 +28,7 @@ const SliderWrapper = ({ settings, classname, disabledIdx, title, children, arro
         <div className="flex">
           <img
             className={`-rotate-90 ${arrowClasses} cursor-pointer`}
-            src={`/assets/icons/${
+            src={`assets/icons/${
               disabledIdx ? "inactive" : "active"
             }/arrow-up.svg`}
             alt=""
@@ -36,7 +36,7 @@ const SliderWrapper = ({ settings, classname, disabledIdx, title, children, arro
           />
           <img
             className={`rotate-90 ${arrowClasses} cursor-pointer`}
-            src={`/assets/icons/${
+            src={`assets/icons/${
               disabledIdx ? "inactive" : "active"
             }/arrow-up.svg`}
             alt=""

@@ -46,7 +46,7 @@ const Mentors = () => {
               <div className="flex flex-row gap-[20px]">
               <img
                 className="rounded-full w-[45px] h-[45px]"
-                src="/assets/images/mentor.svg"
+                src="assets/images/mentor.svg"
                 alt=""
               />
               <div className="flex-1">
@@ -57,11 +57,11 @@ const Mentors = () => {
             </div>
             <div className="flex gap-[2rem]">
               <div className="flex gap-[5px]">
-                <img src="/assets/icons/document.svg" alt="" />
+                <img src="assets/icons/document.svg" alt="" />
                 <p>{mentor.courses} Course</p>
               </div>
               <div className="flex gap-[5px]">
-                <img src="/assets/icons/active/Star-medium.svg" alt="" />
+                <img src="assets/icons/active/Star-medium.svg" alt="" />
                 <p>{`${mentor.rating} (${mentor.reviews} Review)`}</p>
               </div>
             </div>
